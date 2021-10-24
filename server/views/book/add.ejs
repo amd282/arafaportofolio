@@ -1,3 +1,7 @@
+<!--Name: Ahmed Saeed-->
+<!--Student No: 301180773-->
+
+
 <%- include ../partials/header.ejs %>
 
 <%- include ../partials/main_nav.ejs %>
@@ -10,43 +14,27 @@
 
             <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="nameTextField">Book Title</label>
+                    <label for="nameTextField">Contact Name</label>
                     <input type="text" class="form-control"
                     id="nameTextField"
-                    placeholder="Enter the Book Title"
+                    placeholder="Enter the Contact's Name"
                     name="name" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="authorTextField">Author</label>
-                    <input type="text" class="form-control"
-                    id="authorTextField"
-                    placeholder="Enter the Book's Author"
-                    name="author" required>
+                    <label for="numberTextField">Contact Number</label>
+                    <input type="number" class="form-control"
+                    id="numberTextField"
+                    placeholder="Enter the Contact's Number"
+                    name="number" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="publishedTextField">Year</label>
-                    <input type="text" class="form-control"
-                    id="publishedTextField"
-                    placeholder="Enter the Year of Publication"
-                    name="published" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="descriptionTextArea">Description</label>
-                    <textarea type="text" class="form-control"
-                    id="descriptionTextArea"
-                    placeholder="Enter the a brief description of the book"
-                    name="description" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="priceTextField">Price</label>
-                    <input type="text" class="form-control"
-                    id="priceTextField"
-                    placeholder="Enter the Book's Price"
-                    name="price" required>
+                    <label for="emailTextField">Email</label>
+                    <input type="email" class="form-control"
+                    id="emailTextField"
+                    placeholder="Enter Contact's Email"
+                    name="email" required>
                 </div>
 
                 <button class="btn btn-primary" type="submit">

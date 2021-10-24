@@ -1,3 +1,6 @@
+/*Name: Ahmed Saeed
+Student No: 301180773*/
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
@@ -13,7 +16,7 @@ module.exports.displayBookList = (req, res, next) => {
       //console.log(BookList);
 
       res.render("book/list", 
-      { title: "Books", 
+      { title: "Business Contacts", 
       BookList: bookList, 
       displayName: req.user ? req.user.displayName: "" });
     }
@@ -21,17 +24,15 @@ module.exports.displayBookList = (req, res, next) => {
 };
 
 module.exports.displayAddPage = (req, res, next) => {
-  res.render("book/add", { title: "Add Book",
+  res.render("book/add", { title: "Add Contact",
   displayName: req.user ? req.user.displayName: "" });
 };
 
 module.exports.processAddPage = (req, res, next) => {
   let newBook = Book({
         "name": req.body.name,
-        "author": req.body.author,
-        "published": req.body.published,
-        "description": req.body.description,
-        "price": req.body.price
+        "number": req.body.number,
+        "email": req.body.email
     });
 
   Book.create(newBook, (err, Book) => {
@@ -54,7 +55,7 @@ module.exports.displayEditPage = (req, res, next) => {
       res.end(err);
     } else {
       //show the edit view
-      res.render("book/edit", { title: "Edit Book", 
+      res.render("book/edit", { title: "Update Contact", 
       book: bookToEdit,
       displayName: req.user ? req.user.displayName: "" });
     }
@@ -67,10 +68,8 @@ module.exports.processEditPage = (req, res, next) => {
   let updatedBook = Book({
     "_id": id,
     "name": req.body.name,
-    "author": req.body.author,
-    "published": req.body.published,
-    "description": req.body.description,
-    "price": req.body.price
+    "number": req.body.number,
+    "email": req.body.email
   });
 
   Book.updateOne({_id: id}, updatedBook, (err) => {

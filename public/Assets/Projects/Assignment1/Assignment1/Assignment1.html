@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Basal Metabolic Rate Calculator (BMR)</title>
+    <link href="Assignment1.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="outer-box-frame">
+        <header>
+            <img src="bmr.png" alt="image of fruits">
+            <hr>
+            <h3>Let's Calculate your BMR!</h3>
+            <hr>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="Assignment1.html">Metric Calculator</a></li>
+                <li><a href="Imperial.html">Imperial Calculator</a></li>
+            </ul>
+        </nav>
+        <p></p>
+        <h2>BMR Metric</h2>
+        <select id="Gender" name="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <p></p>
+        <label for="Age">Age <input type="Number" id="age" name="age" /></label>
+        <p></p>
+        <label for="Height">Height (cm) <input type="Number" id="metricHeight" name="Height" /></label>
+        <p></p>
+        <label for="Weight">Weight (kg) <input type="Number" id="metricWeight" name="weight" /></label>
+        <p></p>
+        <p>Select your activity level:</p>
+
+        <div class="radio-toolbar">
+            <input type="radio" id="activityLevel1" name="activityLevel1" value="1.2">
+            <label for="activityLevel1">I am sedentary (little or no exercise)(1.2)</label><br>
+            <br>
+            <input type="radio" id="activityLevel2" name="activityLevel2" value="1.375">
+            <label for="activityLevel2">I am lightly active (light exercise or sports 1-3 days per week)(1.375)</label><br>
+            <br>
+            <input type="radio" id="activityLevel3" name="activityLevel3" value="1.55">
+            <label for="activityLevel3">I am moderately active (moderate exercise or sports 3-5 days per week)(1.55)</label><br>
+            <br>
+            <input type="radio" id="activityLevel4" name="activityLevel4" value="1.725">
+            <label for="activityLevel4">I am very active (hard exercise or sports 6-7 days per week)(1.725)</label><br>
+            <br>
+            <input type="radio" id="activityLevel5" name="activityLevel5" value="1.9">
+            <label for="activityLevel5">I am super active(very hard exercise or sports and physical job or 2x training)(1.9)</label><br>
+            <br>
+        </div>
+
+
+        <input type="button" id="submit" value="Calculate BMR" />
+        <hr>
+        <footer>
+            <h6>&copy;&nbsp;Copyright Ahmed Saeed #301180773 - Basal Measurement Rate Calculator</h6>
+        </footer>
+    </div>
+    <script src="BMR1.js"></script>
+</body>
+</html>

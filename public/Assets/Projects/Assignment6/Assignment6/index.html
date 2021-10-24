@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="assignment6.css" />
+
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Live Weather Report</title>
+
+</head>
+
+<body>
+
+    <h1>Live Weather Report</h1>
+
+    <label id="city_name">Type City name:</label>
+
+    <input type="text" id="city" />
+
+    <div class="output">
+
+        <button class="inline" onclick="getWeatherCity()">
+
+            Get City Information
+
+        </button>
+
+        <div class="information" id="city_res"></div>
+
+        <button onclick="getWeatherGeo()" class="inline">
+
+            Get weather report of your current city
+
+        </button>
+
+        <div class="information" id="place_res"></div>
+
+        <button onclick="getLocationOnMap()" class="inline">
+
+            Get your current location on google maps
+
+        </button>
+
+        <div class="information" id="map_res">
+
+            <div class="none" id="map"></div>
+
+        </div>
+
+    </div>
+    <footer>
+        <h6>&copy;&nbsp;Copyright Ahmed Saeed #301180773 - Live Weather Report</h6>
+    </footer>
+
+    <script type="text/javascript" src="assignment6.js"></script>
+
+    <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHG8StiScWCLLhbrsQjpwxPvnkHQEpIIM&callback=initMap"></script>
+
+</body>
+
+</html>
+
+
