@@ -11,8 +11,8 @@ let bookModel = mongoose.Schema(
     email: String
   },
   {
-    collection: "books",
+    collection: "contacts",
   }
 );
 
-module.exports = mongoose.model("Book", bookModel);
+module.exports = mongoose.model("Contacts", bookModel);

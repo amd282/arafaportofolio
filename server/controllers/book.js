@@ -41,7 +41,7 @@ module.exports.processAddPage = (req, res, next) => {
       res.end(err);
     } else {
       // refresh the book list
-      res.redirect("/book-list");
+      res.redirect("/contacts-list");
     }
   });
 };
@@ -80,7 +80,7 @@ module.exports.processEditPage = (req, res, next) => {
     else
     {
       // refresh the book list
-      res.redirect("/book-list");
+      res.redirect("/contacts-list");
     }
   });
 };
@@ -96,7 +96,7 @@ module.exports.performDelete = (req, res, next) => {
     else
     {
       // refresh the book list
-      res.redirect("/book-list");
+      res.redirect("/contacts-list");
     }
   });
 };
